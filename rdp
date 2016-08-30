@@ -1,0 +1,29 @@
+#!/bin/sh
+# /etc/init.d/rdp
+#
+
+### BEGIN INIT INFO
+# Provides:             rdp
+# Required-Start:       $remote_fs $syslog
+# Required-Stop:        $remote_fs $syslog
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description:    Simple program to run RDP on boot
+# Description:          See Short-Description
+### END INIT INFO
+
+case "$1" in
+        start)
+          echo "starting RDP client..."
+          while true; do xinit /usr/bin/rdesktop -f -d "W9143dom" -u "" 172.20.1.7 -- :1; done
+          ;;
+        stop)
+          echo "stopping RDP client..."
+          pkill rdesktop
+          ;;
+        *)
+          echo "Improper arguments used"
+          ;;
+esac
+
+exit 0
