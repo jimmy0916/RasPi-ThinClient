@@ -9,6 +9,7 @@ mv /root/RasPi-ThinClient/getIdle /usr/bin/getIdle
 
 # move the rdp shell script to /usr/bin
 mv /root/RasPi-ThinClient/rdesktop.sh /usr/bin/rdp
+chmod 755 /usr/bin/rdp
 
 # add the rdp startup script to /etc/init.d/ and run it on boot
 mv /root/RasPi-ThinClient/rdp /etc/init.d/rdp
