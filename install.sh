@@ -1,3 +1,3 @@
 #!/bin/bash
 apt-get install libxss-dev gcc
-gcc -I /root/getidle/ -o getIdle getIdle.c -lXss -lX11
+gcc -I /root/RasPi-ThinClient/ -o getIdle getIdle.c -lXss -lX11
