@@ -15,7 +15,7 @@
 case "$1" in
         start)
           echo "starting RDP client..."
-          while true; do xinit /usr/bin/rdesktop -f -d "W9143dom" -u "" 172.20.1.7 -- :1; done
+          while true; do /usr/bin/rdp; done
           ;;
         stop)
           echo "stopping RDP client..."
